@@ -1,1 +1,1 @@
-# Customer-Churn-Project
+# Forecasting and Detecting Anomalies in IoT Sensor Data
