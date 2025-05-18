@@ -1,4 +1,4 @@
-**#** Rakuten E-Commerce Sales Forecasting & Inventory Optimization
+# Rakuten E-Commerce Sales Forecasting & Inventory Optimization
 
 **Goal**: Predict future sales and recommend optimal inventory levels for an online retailer using real-world e-commerce data.
 
