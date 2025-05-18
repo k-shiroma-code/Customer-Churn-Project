@@ -1,74 +1,93 @@
-# Rakuten E-Commerce Sales Forecasting & Inventory Optimization
+# 🛍️ Retail Sales Insights & Customer Behavior Analysis (SQL + Tableau)
 
-**Goal**: Predict future sales and recommend optimal inventory levels for an online retailer using real-world e-commerce data.
+This project analyzes a real-world transactional dataset from a UK-based online retail store using SQL. We explore customer behavior, sales performance, and inventory metrics, then visualize key insights with Tableau.
 
-## 🚀 Overview
+## 📊 Dataset
 
-This end-to-end data science project includes:
-- Data cleaning and preprocessing (SQL, Pandas)
-- Exploratory Data Analysis (EDA)
-- Predictive modeling using time series regression
-- Interactive Tableau dashboards
-- Optional Streamlit app for sales prediction
+**Source:** [UCI Machine Learning Repository - Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)  
+**Period Covered:** December 1, 2010 – December 9, 2011  
+**Size:** 541,909 transactions  
+**File:** `Online Retail.xlsx` (converted to CSV)
 
-## 🛠️ Tools & Technologies
-- **Languages**: Python, SQL
-- **Libraries**: Pandas, NumPy, Scikit-learn, XGBoost, Matplotlib, Seaborn
-- **Platforms**: Jupyter Notebook, Tableau, Streamlit
-- **Techniques**: Regression, Time Series Forecasting, Feature Engineering, Lag Features
+## 🧾 Variables Table
 
-## 🧩 Project Structure
+| Variable Name | Role      | Type        | Description                                                                 | Units     | Missing Values |
+|---------------|-----------|-------------|-----------------------------------------------------------------------------|-----------|----------------|
+| InvoiceNo     | ID        | Categorical | A 6-digit code uniquely assigned to each transaction. Codes starting with 'C' indicate cancellations. | —         | No             |
+| StockCode     | ID        | Categorical | A 5-digit code uniquely assigned to each distinct product.                  | —         | No             |
+| Description   | Feature   | Categorical | Product name.                                                               | —         | No             |
+| Quantity      | Feature   | Integer     | Number of items purchased per product per transaction.                      | —         | No             |
+| InvoiceDate   | Feature   | Date        | Date and time when each transaction was generated.                          | —         | No             |
+| UnitPrice     | Feature   | Continuous  | Product price per unit.                                                     | Sterling  | No             |
+| CustomerID    | Feature   | Categorical | A 5-digit code uniquely assigned to each customer.                          | —         | No             |
+| Country       | Feature   | Categorical | Country where the customer resides.                                         | —         | No             |
 
+## 🛠️ Tools Used
+
+- **SQL** (SQLite / PostgreSQL / MySQL)
+- **Tableau** for visualization
+- **Excel / Python** for pre-processing (optional)
+
+## 🔍 Key Questions Answered
+
+- 🧾 What are the top-selling products?
+- 🌍 Which countries generate the most revenue?
+- 📅 How do sales trend monthly?
+- 💰 What is the average revenue per customer?
+- ❌ What percentage of transactions are returns?
+- 🛒 How big is the average shopping basket?
+
+## 🧠 SQL Topics Covered
+
+- Aggregation (`SUM`, `AVG`, `COUNT`)
+- Filtering (`WHERE`, `LIKE`, `BETWEEN`)
+- Date & time functions
+- Grouping (`GROUP BY`, `HAVING`)
+- CTEs & Subqueries
+- Joins (if extended to other tables)
+- Window Functions (for RFM analysis)
+
+## 📈 Tableau Dashboard Highlights
+
+- Revenue by Country
+- Monthly Sales Trend
+- Top Products by Revenue
+- Return Rate Overview
+- Customer Segmentation (Optional)
+
+## 📌 Setup Instructions
+
+1. Download the dataset from [UCI Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00352/)
+2. Convert `Online Retail.xlsx` to CSV format
+3. Create a SQL table with the following schema:
+
+```sql
+CREATE TABLE online_retail (
+  InvoiceNo TEXT,
+  StockCode TEXT,
+  Description TEXT,
+  Quantity INTEGER,
+  InvoiceDate DATETIME,
+  UnitPrice REAL,
+  CustomerID TEXT,
+  Country TEXT
+);
 ```
-rakuten-sales-forecasting/
-│
-├── data/
-│   ├── raw/             # Original Rakuten data
-│   ├── processed/       # Cleaned & feature-rich datasets
-│   └── for_tableau/     # Exported data for Tableau dashboards
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb
-│   └── 02_Modeling.ipynb
-│
-├── sql/
-│   └── queries.sql      # SQL queries for data exploration
-│
-├── tableau/
-│   └── dashboards.twb   # Tableau workbook and screenshots
-│
-├── streamlit_app/
-│   └── app.py           # Optional app for interactive predictions
-│
-├── README.md
-└── requirements.txt
-```
 
-## 📊 Tableau Dashboards
-- **Sales Overview**: Track total sales, top products, revenue trends
-- **Category Insights**: Category-level analysis over time
-- **Inventory Alerts**: Identify understocked or overstocked items
-- **Forecasting Panel**: Compare actual vs. predicted sales
+4. Import the CSV into your SQL database of choice
+5. Start querying!
 
-## 🤖 Modeling
-- Feature engineering from time-based and historical sales data
-- Handled missing values and outliers
-- Trained XGBoost and Random Forest regressors
-- Evaluated performance using RMSE and MAE
-- Deployed forecasts for next 30 days by product/category
+## ✅ Future Enhancements
 
-## ✅ Results
-- Achieved predictive accuracy within ±10% of actual sales on average
-- Enabled inventory managers to reduce overstock and anticipate demand spikes
-- Created dashboards to drive decision-making for non-technical stakeholders
-
-## 💡 Future Work
-- Incorporate pricing, promo, or external data (weather, holidays)
-- Add LSTM/Prophet for sequence-based forecasting
-- Improve interactivity in Streamlit and Tableau
+- Forecast sales using Python time series models
+- Add customer clustering using RFM + K-Means
+- Build a Streamlit dashboard (optional)
 
 ---
 
-**Author**: Kyle Shiroma  
-**GitHub**: [@k-shiroma-code](https://github.com/k-shiroma-code)  
-**Email**: kyleshiroma77@gmail.com
+## 📬 Contact
+
+**Kyle Shiroma**  
+📧 kyleshiroma77@gmail.com  
+🌐 [LinkedIn](https://www.linkedin.com/in/your-profile)  
+🗃️ [More Projects](https://github.com/k-shiroma-code)
