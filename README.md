@@ -1,15 +1,15 @@
-# 🛍️ Retail Sales Insights & Customer Behavior Analysis (SQL + Tableau)
+# Retail Sales Insights & Customer Behavior Analysis (SQL)
 
-This project analyzes a real-world transactional dataset from a UK-based online retail store using SQL. We explore customer behavior, sales performance, and inventory metrics, then visualize key insights with Tableau.
+This project analyzes a real-world transactional dataset from a UK-based online retail store using SQL. We explore customer behavior, sales performance, and inventory metrics.
 
-## 📊 Dataset
+## Dataset
 
 **Source:** [UCI Machine Learning Repository - Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)  
 **Period Covered:** December 1, 2010 – December 9, 2011  
 **Size:** 541,909 transactions  
 **File:** `Online Retail.xlsx` (converted to CSV)
 
-## 🧾 Variables Table
+## Variables Table
 
 | Variable Name | Role      | Type        | Description                                                                 | Units     | Missing Values |
 |---------------|-----------|-------------|-----------------------------------------------------------------------------|-----------|----------------|
@@ -22,21 +22,20 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 | CustomerID    | Feature   | Categorical | A 5-digit code uniquely assigned to each customer.                          | —         | No             |
 | Country       | Feature   | Categorical | Country where the customer resides.                                         | —         | No             |
 
-## 🛠️ Tools Used
+## Tools Used
 
-- **SQL** (SQLite)
-- **Tableau** for visualization
-
+- **SQL** (SQLite), Dbeaver
+  
 ## 🔍 Key Questions Answered
 
-- 🧾 What are the top-selling products?
-- 🌍 Which countries generate the most revenue?
-- 📅 How do sales trend monthly?
-- 💰 What is the average revenue per customer?
-- ❌ What percentage of transactions are returns?
-- 🛒 How big is the average shopping basket?
+- What are the top-selling products?
+- Which countries generate the most revenue?
+- How do sales trend monthly?
+- What is the average revenue per customer?
+- What percentage of transactions are returns?
+- How big is the average shopping basket?
 
-## 🧠 SQL Topics Covered
+## SQL Topics Covered
 
 - Aggregation (`SUM`, `AVG`, `COUNT`)
 - Filtering (`WHERE`, `LIKE`, `BETWEEN`)
@@ -45,7 +44,3 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 - CTEs & Subqueries
 - Joins (if extended to other tables)
 - Window Functions (for RFM analysis)
-
-## 📈 Tableau Dashboard Highlights
-
-- Revenue by Country Code
