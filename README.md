@@ -26,7 +26,7 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 
 - **SQL** (SQLite), Dbeaver
   
-## 🔍 Key Questions Answered
+## Key Questions Answered
 
 - What are the top-selling products?
 - Which countries generate the most revenue?
