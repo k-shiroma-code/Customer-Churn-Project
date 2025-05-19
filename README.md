@@ -24,9 +24,9 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 
 ## 🛠️ Tools Used
 
-- **SQL** (SQLite / PostgreSQL / MySQL)
+- **SQL** (SQLite)
 - **Tableau** for visualization
-- **Excel / Python** for pre-processing (optional)
+- **Excel / Python** for pre-processing
 
 ## 🔍 Key Questions Answered
 
