@@ -49,19 +49,3 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 ## 📈 Tableau Dashboard Highlights
 
 - Revenue by Country　Code
-
-
-## ✅ Future Enhancements
-
-- Forecast sales using Python time series models
-- Add customer clustering using RFM + K-Means
-- Build a Streamlit dashboard
-
----
-
-## 📬 Contact
-
-**Kyle Shiroma**  
-📧 kyleshiroma77@gmail.com  
-🌐 [LinkedIn](https://www.linkedin.com/in/your-profile)  
-🗃️ [More Projects](https://github.com/k-shiroma-code)
