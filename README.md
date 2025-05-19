@@ -49,33 +49,8 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 
 ## 📈 Tableau Dashboard Highlights
 
-- Revenue by Country
-- Monthly Sales Trend
-- Top Products by Revenue
-- Return Rate Overview
-- Customer Segmentation (Optional)
+- Revenue by Country　Code
 
-## 📌 Setup Instructions
-
-1. Download the dataset from [UCI Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00352/)
-2. Convert `Online Retail.xlsx` to CSV format
-3. Create a SQL table with the following schema:
-
-```sql
-CREATE TABLE online_retail (
-  InvoiceNo TEXT,
-  StockCode TEXT,
-  Description TEXT,
-  Quantity INTEGER,
-  InvoiceDate DATETIME,
-  UnitPrice REAL,
-  CustomerID TEXT,
-  Country TEXT
-);
-```
-
-4. Import the CSV into your SQL database of choice
-5. Start querying!
 
 ## ✅ Future Enhancements
 
