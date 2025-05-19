@@ -81,7 +81,7 @@ CREATE TABLE online_retail (
 
 - Forecast sales using Python time series models
 - Add customer clustering using RFM + K-Means
-- Build a Streamlit dashboard (optional)
+- Build a Streamlit dashboard
 
 ---
 
