@@ -48,4 +48,4 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 
 ## 📈 Tableau Dashboard Highlights
 
-- Revenue by Country　Code
+- Revenue by Country Code
