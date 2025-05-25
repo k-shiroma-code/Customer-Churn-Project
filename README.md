@@ -25,6 +25,10 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 ## Tools Used
 
 - **SQL** (SQLite), Dbeaver, Tableau
+
+  1. clean up data and organize column
+  2. make sure data is correct datatype
+  3. change dat format to iso standard
   
 ## Key Questions Answered
 
