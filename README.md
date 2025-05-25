@@ -24,7 +24,7 @@ This project analyzes a real-world transactional dataset from a UK-based online 
 
 ## Tools Used
 
-- **SQL** (SQLite), Dbeaver
+- **SQL** (SQLite), Dbeaver, Tableau
   
 ## Key Questions Answered
 
