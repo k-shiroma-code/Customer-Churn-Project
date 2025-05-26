@@ -1,4 +1,4 @@
-# Online Retail Sales Analysis
+# Customer Segmentation with RFM Analysis
 
 ## Overview
 This project analyzes a UK-based online retail dataset using **SQL** for data transformation and analysis, and **Tableau** for interactive visualization. The goal is to uncover actionable business insights related to sales trends, customer behavior, and product relationships. A key part of the analysis includes **RFM (Recency, Frequency, Monetary)** segmentation to classify customers into behavioral groups.
