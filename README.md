@@ -68,6 +68,7 @@ An interactive dashboard was created using Tableau to enhance understanding of R
 - Incorporate customer demographic or behavioral data to refine segmentation.
 - Apply machine learning models to predict high-value customers and churn.
 - Expand Tableau dashboards to include filters and interactivity for end users.
+- Apply Time-Series forecast
 
 ---
 
