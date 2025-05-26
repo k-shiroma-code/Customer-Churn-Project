@@ -1,62 +1,80 @@
-# Online Retail Sales Analysis Project
+# Online Retail Sales Analysis
 
 ## Overview
-This project analyzes the Online Retail dataset from a UK-based online store using SQL. It focuses on cleaning and transforming raw data, followed by extracting actionable business insights related to sales performance, customer behavior, and product relationships.
+This project analyzes a UK-based online retail dataset using **SQL** for data transformation and analysis, and **Tableau** for interactive visualization. The goal is to uncover actionable business insights related to sales trends, customer behavior, and product relationships. A key part of the analysis includes **RFM (Recency, Frequency, Monetary)** segmentation to classify customers into behavioral groups.
+
+---
 
 ## Data Cleaning and Transformation
-- Renamed ambiguous columns with meaningful names (e.g., `InvoiceNo`, `StockCode`, `Description`, etc.).
-- Converted data types to appropriate formats (e.g., integers for `Quantity` and `CustomerID`, real numbers for `UnitPrice`).
-- Removed metadata rows and filtered out return transactions (invoices starting with 'C').
-- Parsed inconsistent date formats into a standardized SQL date format.
+- Renamed ambiguous columns with descriptive names (`InvoiceNo`, `StockCode`, `Description`, etc.).
+- Casted data to appropriate types (e.g., integers for `Quantity`, reals for `UnitPrice`).
+- Removed rows representing returns (invoices starting with "C").
+- Standardized inconsistent date formats into SQL date format for time-based analysis.
 
-## Key Analyses Performed
-1. **Top-selling Products**  
-   Identified the best-selling products by total revenue.
+---
 
-2. **Geographic Sales Distribution**  
-   Analyzed revenue contributions by country.
+## Analyses Performed
 
-3. **Monthly Sales Trends**  
-   Tracked sales revenue over time to detect seasonality.
+### 1. Top-Selling Products
+Identified products generating the highest revenue.
 
-4. **Customer Insights**  
-   - Calculated average revenue per customer.  
-   - Conducted Recency-Frequency-Monetary (RFM) analysis to segment customers into meaningful groups (e.g., Champions, Loyal Customers, At Risk).
+### 2. Geographic Sales Distribution
+Summarized total revenue by country to identify major markets.
 
-5. **Return Rate Analysis**  
-   Estimated the percentage of transactions that were returns.
+### 3. Monthly Sales Trends
+Tracked changes in revenue over time to detect seasonality and business cycles.
 
-6. **Shopping Basket Analysis**  
-   Calculated average basket size (items per invoice) and average basket value.
+### 4. Customer Insights with RFM Segmentation
+Performed Recency-Frequency-Monetary analysis to segment customers into:
+- Big Spenders  
+- Recent but One-Time  
+- At Risk  
+- Others  
 
-7. **Market Basket Analysis**  
-   Identified product pairs frequently purchased together.
+### 5. Return Rate Analysis
+Filtered and analyzed return transactions to understand customer return behavior and its effect on revenue.
 
-8. **Customer Ranking & Segmentation with Window Functions**  
-   Used window functions to rank customers by revenue and assign quartiles based on monetary value.
+### 6. Shopping Basket Metrics
+Calculated the average number of items and monetary value per invoice to evaluate customer purchasing patterns.
 
-## Challenges
-- Handling inconsistent and non-standard date formats for proper analysis.
-- Filtering and excluding return transactions to focus on revenue-generating sales.
-- Implementing RFM segmentation and scoring logic using SQL CASE statements.
-- Performing market basket analysis through self-joins to detect product affinities.
+### 7. Market Basket Analysis
+Used self-joins to identify frequently purchased product pairs, revealing cross-selling opportunities.
 
-## Results & Insights
-- Top products generate a significant portion of revenue, indicating best sellers.
-- Certain countries dominate revenue, revealing key market opportunities.
-- Sales exhibit seasonality, with identifiable peaks in monthly revenue.
-- Customer segmentation highlights distinct groups for targeted marketing.
-- Product affinity analysis uncovers common product bundles for potential cross-selling.
+### 8. Customer Ranking & Quartiles
+Applied window functions to rank customers by revenue and classify them into quartiles based on spending behavior.
+
+---
+
+## Tableau Visualization
+
+An interactive dashboard was created using Tableau to enhance understanding of RFM segments and customer patterns.
+
+**Key Views in the Dashboard:**
+- RFM Segment Distribution (bar chart)
+- Recency vs. Frequency (scatter plot)
+- Monetary Value by Segment (bar chart)
+
+---
+
+## Key Insights
+- A small group of products and customers drive a large share of revenue.
+- Sales show seasonality, with peaks indicating high-demand periods.
+- RFM segmentation reveals valuable customer groups for personalized marketing.
+- Common product bundles suggest potential for increasing basket size via recommendations.
+
+---
 
 ## Future Work
-- Integrate customer demographic data to enrich segmentation.
-- Implement predictive models to forecast sales trends.
-- Develop interactive dashboards to visualize insights.
+- Incorporate customer demographic or behavioral data to refine segmentation.
+- Apply machine learning models to predict high-value customers and churn.
+- Expand Tableau dashboards to include filters and interactivity for end users.
+
+---
 
 ## How to Run This Project
 1. Import the `online_retail.csv` dataset into your SQL database.
-2. Run the provided data cleaning and schema setup SQL scripts.
+2. Run the provided SQL scripts for cleaning and schema setup.
 3. Execute the analysis queries sequentially to generate insights.
-4. Export query results for further visualization or reporting.
+4. Export the results for visualization or import into Tableau for dashboards.
 
 ---
