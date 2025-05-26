@@ -1,65 +1,62 @@
-# Retail Sales Insights & Customer Behavior Analysis (SQL)
+# Online Retail Sales Analysis Project
 
-This project analyzes a real-world transactional dataset from a UK-based online retail store using SQL. The focus is on uncovering customer behavior patterns, evaluating sales performance, and monitoring inventory metrics.
+## Overview
+This project analyzes the Online Retail dataset from a UK-based online store using SQL. It focuses on cleaning and transforming raw data, followed by extracting actionable business insights related to sales performance, customer behavior, and product relationships.
 
----
+## Data Cleaning and Transformation
+- Renamed ambiguous columns with meaningful names (e.g., `InvoiceNo`, `StockCode`, `Description`, etc.).
+- Converted data types to appropriate formats (e.g., integers for `Quantity` and `CustomerID`, real numbers for `UnitPrice`).
+- Removed metadata rows and filtered out return transactions (invoices starting with 'C').
+- Parsed inconsistent date formats into a standardized SQL date format.
 
-## Dataset Overview
+## Key Analyses Performed
+1. **Top-selling Products**  
+   Identified the best-selling products by total revenue.
 
-- **Source:** [UCI Machine Learning Repository – Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)  
-- **Time Period:** December 1, 2010 – December 9, 2011  
-- **Total Records:** 541,909 transactions  
-- **File Used:** `Online Retail.xlsx` (converted to CSV for analysis)
+2. **Geographic Sales Distribution**  
+   Analyzed revenue contributions by country.
 
----
+3. **Monthly Sales Trends**  
+   Tracked sales revenue over time to detect seasonality.
 
-## Data Dictionary
+4. **Customer Insights**  
+   - Calculated average revenue per customer.  
+   - Conducted Recency-Frequency-Monetary (RFM) analysis to segment customers into meaningful groups (e.g., Champions, Loyal Customers, At Risk).
 
-| Variable Name | Role       | Data Type   | Description                                                                 | Units     | Missing Values |
-|---------------|------------|-------------|------------------------------------------------------------------------------|-----------|----------------|
-| `InvoiceNo`   | Identifier | Categorical | Unique transaction code (prefix 'C' denotes cancellations)                   | —         | None           |
-| `StockCode`   | Identifier | Categorical | Unique product code                                                         | —         | None           |
-| `Description` | Feature    | Categorical | Product name                                                                 | —         | None           |
-| `Quantity`    | Feature    | Integer     | Number of items purchased per transaction                                   | —         | None           |
-| `InvoiceDate` | Feature    | DateTime    | Date and time of transaction                                                | —         | None           |
-| `UnitPrice`   | Feature    | Float       | Product price per unit                                                      | Sterling  | None           |
-| `CustomerID`  | Feature    | Categorical | Unique customer identifier                                                  | —         | None           |
-| `Country`     | Feature    | Categorical | Customer’s country of residence                                             | —         | None           |
+5. **Return Rate Analysis**  
+   Estimated the percentage of transactions that were returns.
 
----
+6. **Shopping Basket Analysis**  
+   Calculated average basket size (items per invoice) and average basket value.
 
-## Tools Used
+7. **Market Basket Analysis**  
+   Identified product pairs frequently purchased together.
 
-- **SQL (SQLite)** – Querying and analyzing the data
-- **DBeaver** – SQL IDE for running queries and exploration
-- **Tableau** – Visualization and dashboard creation
+8. **Customer Ranking & Segmentation with Window Functions**  
+   Used window functions to rank customers by revenue and assign quartiles based on monetary value.
 
-### Data Preparation Steps
-1. Cleaned and standardized column names
-2. Ensured all data types were correctly formatted
-3. Converted date formats to ISO standard
+## Challenges
+- Handling inconsistent and non-standard date formats for proper analysis.
+- Filtering and excluding return transactions to focus on revenue-generating sales.
+- Implementing RFM segmentation and scoring logic using SQL CASE statements.
+- Performing market basket analysis through self-joins to detect product affinities.
 
----
+## Results & Insights
+- Top products generate a significant portion of revenue, indicating best sellers.
+- Certain countries dominate revenue, revealing key market opportunities.
+- Sales exhibit seasonality, with identifiable peaks in monthly revenue.
+- Customer segmentation highlights distinct groups for targeted marketing.
+- Product affinity analysis uncovers common product bundles for potential cross-selling.
 
-## Key Business Questions Answered
+## Future Work
+- Integrate customer demographic data to enrich segmentation.
+- Implement predictive models to forecast sales trends.
+- Develop interactive dashboards to visualize insights.
 
-- What are the top-selling products?
-- Which countries generate the most revenue?
-- How do sales trend month by month?
-- What is the average revenue per customer?
-- What percentage of transactions are returns?
-- How big is the average shopping basket?
-
----
-
-## SQL Topics Covered
-
-- Aggregations: `SUM`, `AVG`, `COUNT`
-- Filtering: `WHERE`, `LIKE`, `BETWEEN`
-- Date & Time functions
-- Grouping: `GROUP BY`, `HAVING`
-- CTEs & Subqueries
-- Joins *(if extended to additional datasets)*
-- Window Functions *(for advanced analysis like RFM)*
+## How to Run This Project
+1. Import the `online_retail.csv` dataset into your SQL database.
+2. Run the provided data cleaning and schema setup SQL scripts.
+3. Execute the analysis queries sequentially to generate insights.
+4. Export query results for further visualization or reporting.
 
 ---
