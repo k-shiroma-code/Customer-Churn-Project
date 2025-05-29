@@ -9,7 +9,7 @@ This project analyzes a UK-based online retail dataset using **SQL** for data tr
 - Renamed ambiguous columns with descriptive names (`InvoiceNo`, `StockCode`, `Description`, etc.).
 - Casted data to appropriate types (e.g., integers for `Quantity`, reals for `UnitPrice`).
 - Removed rows representing returns (invoices starting with "C").
-- Standardized inconsistent date formats into SQL date format for time-based analysis.
+- Standardized inconsistent date formats into SQL date format for time-based analysis (ISO format). 
 
 ---
 
